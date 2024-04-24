@@ -415,7 +415,7 @@ class DynamicIdentifier implements DynamicIdentifierInterface
      *
      * @return string The identifier part string
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->part($offset);
     }
@@ -428,7 +428,7 @@ class DynamicIdentifier implements DynamicIdentifierInterface
      *
      * @return void
      */
-    public function offsetSet($offset, $part)
+    public function offsetSet(mixed $offset, mixed $part): void
     {
         if ($offset === null) {
             $this->append($part);
@@ -444,7 +444,7 @@ class DynamicIdentifier implements DynamicIdentifierInterface
      *
      * @return bool True if a part exists at the specified position
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return $this->has($offset);
     }
@@ -456,7 +456,7 @@ class DynamicIdentifier implements DynamicIdentifierInterface
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         $this->remove($offset);
     }
