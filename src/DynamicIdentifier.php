@@ -466,7 +466,7 @@ class DynamicIdentifier implements DynamicIdentifierInterface
      *
      * @return int The number of identifer name parts
      */
-    public function count()
+    public function count(): int
     {
         return $this->getNumParts();
     }
